@@ -7,6 +7,7 @@ UIKit
 Foundation
 
 Что умеет сейчас:
+- Парсинг с https://docs.github.com/en/rest/gists
 - Отображение списка gists (аватарка, название gist, имя юзера)
 - Переход на новый экран с отображение кода gist
 
