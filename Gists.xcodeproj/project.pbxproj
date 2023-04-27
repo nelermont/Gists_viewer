@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		70B755D429FB050B003C4D40 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D129FB050B003C4D40 /* NetworkClient.swift */; };
-		70B755D529FB050B003C4D40 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D229FB050B003C4D40 /* NetworkError.swift */; };
-		70B755D629FB050B003C4D40 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D329FB050B003C4D40 /* HTTPMethod.swift */; };
 		70EB4A7C28661E710012BF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7B28661E710012BF4F /* AppDelegate.swift */; };
 		70EB4A7E28661E710012BF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7D28661E710012BF4F /* SceneDelegate.swift */; };
 		70EB4A8028661E710012BF4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7F28661E710012BF4F /* ViewController.swift */; };
@@ -23,8 +21,6 @@
 
 /* Begin PBXFileReference section */
 		70B755D129FB050B003C4D40 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = "../../../../../Downloads/Gists_viewer-main/Gists/ViewModel/NetworkClient.swift"; sourceTree = "<group>"; };
-		70B755D229FB050B003C4D40 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = "../../../../../Downloads/Gists_viewer-main/Gists/ViewModel/NetworkError.swift"; sourceTree = "<group>"; };
-		70B755D329FB050B003C4D40 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = "../../../../../Downloads/Gists_viewer-main/Gists/ViewModel/HTTPMethod.swift"; sourceTree = "<group>"; };
 		70EB4A7828661E710012BF4F /* Gists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EB4A7B28661E710012BF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70EB4A7D28661E710012BF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,9 +87,7 @@
 		70EB4A92286620270012BF4F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				70B755D329FB050B003C4D40 /* HTTPMethod.swift */,
 				70B755D129FB050B003C4D40 /* NetworkClient.swift */,
-				70B755D229FB050B003C4D40 /* NetworkError.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,10 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				70EB4A9128661F690012BF4F /* User.swift in Sources */,
-				70B755D529FB050B003C4D40 /* NetworkError.swift in Sources */,
 				70EB4AB92869C9800012BF4F /* GistViewController.swift in Sources */,
 				70EB4A8028661E710012BF4F /* ViewController.swift in Sources */,
-				70B755D629FB050B003C4D40 /* HTTPMethod.swift in Sources */,
 				70B755D429FB050B003C4D40 /* NetworkClient.swift in Sources */,
 				70EB4A7C28661E710012BF4F /* AppDelegate.swift in Sources */,
 				70EB4A7E28661E710012BF4F /* SceneDelegate.swift in Sources */,
