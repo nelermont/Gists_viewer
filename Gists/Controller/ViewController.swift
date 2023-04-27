@@ -10,7 +10,7 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    let parser = Parser()
+    let networkClient = NetworkClient.shared
     var gistsRoot = [GistsRoot]()
 
     @IBOutlet var tableView: UITableView!
@@ -21,33 +21,54 @@ class ViewController: UIViewController {
         return refreshControl
     }()
     var fetchingMore = false
+    let activityIndicator = UIActivityIndicatorView(style: .medium)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.addSubview(activityIndicator)
         tableView.refreshControl = thisRefreshControl
+        activityIndicator.center = tableView.center
+        activityIndicator.startAnimating()
         
-        parser.parse {
-            data in
-            self.gistsRoot = data
-            DispatchQueue.main.async {
+        Task {
+            do {
+                let url = URL(string: "https://api.github.com/gists")!
+                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, method: HTTPMethod.get)
+                
+                activityIndicator.stopAnimating()
+                
+                self.gistsRoot = data
                 self.tableView.reloadData()
+                
+                
+            } catch {
+                activityIndicator.stopAnimating()
+                print(error)
             }
         }
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
     
     @objc private func refresh(sender: UIRefreshControl) {
-        parser.parse {
-            data in
-            self.gistsRoot = data
-            DispatchQueue.main.async {
+        
+        Task {
+            do {
+                let url = URL(string: "https://api.github.com/gists")!
+                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, method: HTTPMethod.get)
+                
+                self.gistsRoot = data
                 self.tableView.reloadData()
+            } catch {
+                print(error)
             }
         }
+        
         sender.endRefreshing()
     }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {

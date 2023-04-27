@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70B755D429FB050B003C4D40 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D129FB050B003C4D40 /* NetworkClient.swift */; };
+		70B755D529FB050B003C4D40 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D229FB050B003C4D40 /* NetworkError.swift */; };
+		70B755D629FB050B003C4D40 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D329FB050B003C4D40 /* HTTPMethod.swift */; };
 		70EB4A7C28661E710012BF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7B28661E710012BF4F /* AppDelegate.swift */; };
 		70EB4A7E28661E710012BF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7D28661E710012BF4F /* SceneDelegate.swift */; };
 		70EB4A8028661E710012BF4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7F28661E710012BF4F /* ViewController.swift */; };
@@ -14,12 +17,14 @@
 		70EB4A8528661E730012BF4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EB4A8428661E730012BF4F /* Assets.xcassets */; };
 		70EB4A8828661E730012BF4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EB4A8628661E730012BF4F /* LaunchScreen.storyboard */; };
 		70EB4A9128661F690012BF4F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A9028661F690012BF4F /* User.swift */; };
-		70EB4A942866203C0012BF4F /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A932866203C0012BF4F /* Parser.swift */; };
 		70EB4AB92869C9800012BF4F /* GistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4AB72869C9800012BF4F /* GistViewController.swift */; };
 		70EB4ABA2869C9800012BF4F /* GistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EB4AB82869C9800012BF4F /* GistViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70B755D129FB050B003C4D40 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = "../../../../../Downloads/Gists_viewer-main/Gists/ViewModel/NetworkClient.swift"; sourceTree = "<group>"; };
+		70B755D229FB050B003C4D40 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = "../../../../../Downloads/Gists_viewer-main/Gists/ViewModel/NetworkError.swift"; sourceTree = "<group>"; };
+		70B755D329FB050B003C4D40 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = "../../../../../Downloads/Gists_viewer-main/Gists/ViewModel/HTTPMethod.swift"; sourceTree = "<group>"; };
 		70EB4A7828661E710012BF4F /* Gists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EB4A7B28661E710012BF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70EB4A7D28661E710012BF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +34,6 @@
 		70EB4A8728661E730012BF4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70EB4A8928661E730012BF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70EB4A9028661F690012BF4F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		70EB4A932866203C0012BF4F /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		70EB4AB72869C9800012BF4F /* GistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistViewController.swift; sourceTree = "<group>"; };
 		70EB4AB82869C9800012BF4F /* GistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +91,9 @@
 		70EB4A92286620270012BF4F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				70EB4A932866203C0012BF4F /* Parser.swift */,
+				70B755D329FB050B003C4D40 /* HTTPMethod.swift */,
+				70B755D129FB050B003C4D40 /* NetworkClient.swift */,
+				70B755D229FB050B003C4D40 /* NetworkError.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -184,9 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				70EB4A9128661F690012BF4F /* User.swift in Sources */,
+				70B755D529FB050B003C4D40 /* NetworkError.swift in Sources */,
 				70EB4AB92869C9800012BF4F /* GistViewController.swift in Sources */,
 				70EB4A8028661E710012BF4F /* ViewController.swift in Sources */,
-				70EB4A942866203C0012BF4F /* Parser.swift in Sources */,
+				70B755D629FB050B003C4D40 /* HTTPMethod.swift in Sources */,
+				70B755D429FB050B003C4D40 /* NetworkClient.swift in Sources */,
 				70EB4A7C28661E710012BF4F /* AppDelegate.swift in Sources */,
 				70EB4A7E28661E710012BF4F /* SceneDelegate.swift in Sources */,
 			);
@@ -344,7 +352,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,7 +382,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
