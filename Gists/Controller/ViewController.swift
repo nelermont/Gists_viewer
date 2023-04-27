@@ -40,8 +40,7 @@ class ViewController: UIViewController {
                 
                 self.gistsRoot = data
                 self.tableView.reloadData()
-                
-                
+    
             } catch {
                 activityIndicator.stopAnimating()
                 print(error)
