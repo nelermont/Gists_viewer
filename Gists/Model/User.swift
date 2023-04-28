@@ -44,7 +44,3 @@ struct Owner: Codable {
     let avatar_url: String?
 }
 
-
-//struct RawUrl: Decodable {
-//    let raw_url:String?
-//}

@@ -10,9 +10,9 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    let networkClient = NetworkClient.shared
+    let networkClient = NetworkClient()
     var gistsRoot = [GistsRoot]()
-
+    
     @IBOutlet var tableView: UITableView!
     
     let thisRefreshControl: UIRefreshControl = {
@@ -34,13 +34,13 @@ class ViewController: UIViewController {
         Task {
             do {
                 let url = URL(string: "https://api.github.com/gists")!
-                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, method: HTTPMethod.get)
+                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, responseType: [GistsRoot].self)!
                 
                 activityIndicator.stopAnimating()
                 
                 self.gistsRoot = data
                 self.tableView.reloadData()
-    
+                
             } catch {
                 activityIndicator.stopAnimating()
                 print(error)
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         Task {
             do {
                 let url = URL(string: "https://api.github.com/gists")!
-                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, method: HTTPMethod.get)
+                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, responseType: [GistsRoot].self)!
                 
                 self.gistsRoot = data
                 self.tableView.reloadData()
