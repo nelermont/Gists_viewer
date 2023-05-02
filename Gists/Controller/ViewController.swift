@@ -31,17 +31,15 @@ class ViewController: UIViewController {
         activityIndicator.center = tableView.center
         activityIndicator.startAnimating()
         
-        Task {
+        Task { @MainActor in
             do {
                 let url = URL(string: "https://api.github.com/gists")!
                 let data: [GistsRoot] = try await networkClient.makeRequest(url: url, responseType: [GistsRoot].self)!
                 
                 activityIndicator.stopAnimating()
-                
-                await MainActor.run {
-                    self.gistsRoot = data
-                    self.tableView.reloadData()
-                }
+
+                self.gistsRoot = data
+                self.tableView.reloadData()
                 
             } catch {
                 activityIndicator.stopAnimating()
@@ -55,15 +53,14 @@ class ViewController: UIViewController {
     
     @objc private func refresh(sender: UIRefreshControl) {
         
-        Task {
+        Task { @MainActor in
             do {
                 let url = URL(string: "https://api.github.com/gists")!
                 let data: [GistsRoot] = try await networkClient.makeRequest(url: url, responseType: [GistsRoot].self)!
                 
-                await MainActor.run {
                     self.gistsRoot = data
                     self.tableView.reloadData()
-                }
+                
             } catch {
                 print(error)
             }
