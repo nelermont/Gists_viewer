@@ -7,21 +7,23 @@
 import Foundation
 
 
-class NetworkClient: Networking {
+class NetworkClient {
     
+    private let baseUrl: URL
     private let urlSession: URLSession
     
-    init(urlSession: URLSession = .shared) {
+    init(baseUrl: URL, urlSession: URLSession = .shared) {
+        self.baseUrl = baseUrl
         self.urlSession = urlSession
     }
     
-    func makeRequest<T: Decodable>(url: URL, method: HTTPMethod? = nil, headers: [String: String]? = nil, query: [String: String]? = nil, body: Data? = nil, responseType: T.Type? = nil) async throws -> T? {
-        
+    func makeRequest<T: Decodable>(path: String, method: HTTPMethod? = nil, headers: [String: String]? = nil, query: [String: String]? = nil, body: [String: Any]? = nil, responseType: T.Type?) async throws -> T? {
+        let url = baseUrl.appendingPathComponent(path)
         let request = try createRequest(url: url, method: method, headers: headers, query: query, body: body)
         return try await sendRequest(request: request, responseType: responseType)
     }
     
-    private func createRequest(url: URL, method: HTTPMethod?, headers: [String: String]?, query: [String: String]?, body: Data?) throws -> URLRequest {
+    private func createRequest(url: URL, method: HTTPMethod?, headers: [String: String]?, query: [String: String]?, body: [String: Any]?) throws -> URLRequest {
         
         guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             throw NetworkError.invalidURL
@@ -47,7 +49,10 @@ class NetworkClient: Networking {
             }
         }
         
-        request.httpBody = body
+        if let body = body {
+            let jsonData = try JSONSerialization.data(withJSONObject: body, options: [])
+            request.httpBody = jsonData
+        }
         
         return request
     }
@@ -74,4 +79,3 @@ class NetworkClient: Networking {
         }
     }
 }
-
