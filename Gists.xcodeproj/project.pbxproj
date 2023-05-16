@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70018E322A13DFC600B8DB44 /* CreateBodyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70018E312A13DFC600B8DB44 /* CreateBodyStruct.swift */; };
 		70B755D829FB0BB5003C4D40 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D729FB0BB5003C4D40 /* HTTPMethod.swift */; };
 		70B755DA29FB0BDD003C4D40 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D929FB0BDD003C4D40 /* NetworkError.swift */; };
 		70B755DC29FB0C6B003C4D40 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755DB29FB0C6B003C4D40 /* NetworkClient.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70018E312A13DFC600B8DB44 /* CreateBodyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBodyStruct.swift; sourceTree = "<group>"; };
 		70B755D729FB0BB5003C4D40 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		70B755D929FB0BDD003C4D40 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		70B755DB29FB0C6B003C4D40 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				70B755D729FB0BB5003C4D40 /* HTTPMethod.swift */,
 				70B755D929FB0BDD003C4D40 /* NetworkError.swift */,
 				70B755DB29FB0C6B003C4D40 /* NetworkClient.swift */,
+				70018E312A13DFC600B8DB44 /* CreateBodyStruct.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				70B755DA29FB0BDD003C4D40 /* NetworkError.swift in Sources */,
 				70EB4AB92869C9800012BF4F /* GistViewController.swift in Sources */,
 				70B755D829FB0BB5003C4D40 /* HTTPMethod.swift in Sources */,
+				70018E322A13DFC600B8DB44 /* CreateBodyStruct.swift in Sources */,
 				70EB4A8028661E710012BF4F /* ViewController.swift in Sources */,
 				70EB4A7C28661E710012BF4F /* AppDelegate.swift in Sources */,
 				70EB4A7E28661E710012BF4F /* SceneDelegate.swift in Sources */,

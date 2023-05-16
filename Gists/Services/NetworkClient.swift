@@ -17,13 +17,13 @@ class NetworkClient {
         self.urlSession = urlSession
     }
     
-    func makeRequest<T: Decodable>(path: String, method: HTTPMethod? = nil, headers: [String: String]? = nil, query: [String: String]? = nil, body: [String: Any]? = nil, responseType: T.Type?) async throws -> T? {
+    func makeRequest<T: Decodable>(path: String, method: HTTPMethod? = nil, headers: [String: String]? = nil, query: [String: String]? = nil, body: CreateBodyStruct? = nil, responseType: T.Type?) async throws -> T? {
         let url = baseUrl.appendingPathComponent(path)
         let request = try createRequest(url: url, method: method, headers: headers, query: query, body: body)
         return try await sendRequest(request: request, responseType: responseType)
     }
     
-    private func createRequest(url: URL, method: HTTPMethod?, headers: [String: String]?, query: [String: String]?, body: [String: Any]?) throws -> URLRequest {
+    private func createRequest(url: URL, method: HTTPMethod?, headers: [String: String]?, query: [String: String]?, body: CreateBodyStruct?) throws -> URLRequest {
         
         guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             throw NetworkError.invalidURL
@@ -50,8 +50,12 @@ class NetworkClient {
         }
         
         if let body = body {
-            let jsonData = try JSONSerialization.data(withJSONObject: body, options: [])
-            request.httpBody = jsonData
+            do {
+                let jsonData = try JSONEncoder().encode(body)
+                request.httpBody = jsonData
+            } catch {
+                throw NetworkError.encodingFailed(error)
+            }
         }
         
         return request

@@ -12,4 +12,5 @@ public enum NetworkError: Error {
     case invalidResponse
     case requestFailed(Error)
     case decodingFailed(Error)
+    case encodingFailed(Error)
 }
