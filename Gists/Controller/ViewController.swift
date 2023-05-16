@@ -10,9 +10,10 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    let networkClient = NetworkClient.shared
+    let baseUrl = URL(string: "https://api.github.com")!
+    let path = "/gists"
     var gistsRoot = [GistsRoot]()
-
+    
     @IBOutlet var tableView: UITableView!
     
     let thisRefreshControl: UIRefreshControl = {
@@ -31,16 +32,17 @@ class ViewController: UIViewController {
         activityIndicator.center = tableView.center
         activityIndicator.startAnimating()
         
-        Task {
+        let networkClient = NetworkClient(baseUrl: baseUrl)
+        
+        Task { @MainActor in
             do {
-                let url = URL(string: "https://api.github.com/gists")!
-                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, method: HTTPMethod.get)
+                let data: [GistsRoot] = try await networkClient.makeRequest(path: path, responseType: [GistsRoot].self)!
                 
                 activityIndicator.stopAnimating()
-                
+
                 self.gistsRoot = data
                 self.tableView.reloadData()
-    
+                
             } catch {
                 activityIndicator.stopAnimating()
                 print(error)
@@ -53,13 +55,15 @@ class ViewController: UIViewController {
     
     @objc private func refresh(sender: UIRefreshControl) {
         
-        Task {
+        let networkClient = NetworkClient(baseUrl: baseUrl)
+        
+        Task { @MainActor in
             do {
-                let url = URL(string: "https://api.github.com/gists")!
-                let data: [GistsRoot] = try await networkClient.makeRequest(url: url, method: HTTPMethod.get)
+                let data: [GistsRoot] = try await networkClient.makeRequest(path: path, responseType: [GistsRoot].self)!
                 
-                self.gistsRoot = data
-                self.tableView.reloadData()
+                    self.gistsRoot = data
+                    self.tableView.reloadData()
+                
             } catch {
                 print(error)
             }
