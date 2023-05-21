@@ -7,35 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70B755D829FB0BB5003C4D40 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D729FB0BB5003C4D40 /* HTTPMethod.swift */; };
-		70B755DA29FB0BDD003C4D40 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755D929FB0BDD003C4D40 /* NetworkError.swift */; };
-		70B755DC29FB0C6B003C4D40 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B755DB29FB0C6B003C4D40 /* NetworkClient.swift */; };
+		70CCCFEA2A056C6400B0610F /* GistsCleanSwiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CCCFE42A056C6400B0610F /* GistsCleanSwiftPresenter.swift */; };
+		70CCCFEC2A056C6400B0610F /* GistsCleanSwiftRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CCCFE62A056C6400B0610F /* GistsCleanSwiftRouter.swift */; };
+		70CCCFED2A056C6400B0610F /* GistsCleanSwiftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CCCFE72A056C6400B0610F /* GistsCleanSwiftModels.swift */; };
+		70CCCFEE2A056C6400B0610F /* GistsCleanSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CCCFE82A056C6400B0610F /* GistsCleanSwiftViewController.swift */; };
+		70CCCFEF2A056C6400B0610F /* GistsCleanSwiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CCCFE92A056C6400B0610F /* GistsCleanSwiftInteractor.swift */; };
+		70CCCFF12A0694F500B0610F /* GistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CCCFF02A0694F400B0610F /* GistCell.swift */; };
+		70CCCFF32A06953E00B0610F /* GistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CCCFF22A06953E00B0610F /* GistViewController.swift */; };
+		70CCCFF52A069C2300B0610F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70CCCFF42A069C2300B0610F /* Main.storyboard */; };
+		70D5F59C2A1955A300E7BFC6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5F59B2A1955A300E7BFC6 /* HTTPMethod.swift */; };
+		70D5F59E2A1955BC00E7BFC6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5F59D2A1955BC00E7BFC6 /* NetworkError.swift */; };
+		70D5F5A02A1955CE00E7BFC6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5F59F2A1955CE00E7BFC6 /* NetworkClient.swift */; };
+		70D5F5A22A1955E200E7BFC6 /* CreateBodyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5F5A12A1955E200E7BFC6 /* CreateBodyStruct.swift */; };
 		70EB4A7C28661E710012BF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7B28661E710012BF4F /* AppDelegate.swift */; };
 		70EB4A7E28661E710012BF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7D28661E710012BF4F /* SceneDelegate.swift */; };
-		70EB4A8028661E710012BF4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A7F28661E710012BF4F /* ViewController.swift */; };
-		70EB4A8328661E710012BF4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EB4A8128661E710012BF4F /* Main.storyboard */; };
 		70EB4A8528661E730012BF4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EB4A8428661E730012BF4F /* Assets.xcassets */; };
 		70EB4A8828661E730012BF4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EB4A8628661E730012BF4F /* LaunchScreen.storyboard */; };
-		70EB4A9128661F690012BF4F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4A9028661F690012BF4F /* User.swift */; };
-		70EB4AB92869C9800012BF4F /* GistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB4AB72869C9800012BF4F /* GistViewController.swift */; };
-		70EB4ABA2869C9800012BF4F /* GistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EB4AB82869C9800012BF4F /* GistViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		70B755D729FB0BB5003C4D40 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		70B755D929FB0BDD003C4D40 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		70B755DB29FB0C6B003C4D40 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		70CCCFE42A056C6400B0610F /* GistsCleanSwiftPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsCleanSwiftPresenter.swift; sourceTree = "<group>"; };
+		70CCCFE62A056C6400B0610F /* GistsCleanSwiftRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsCleanSwiftRouter.swift; sourceTree = "<group>"; };
+		70CCCFE72A056C6400B0610F /* GistsCleanSwiftModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsCleanSwiftModels.swift; sourceTree = "<group>"; };
+		70CCCFE82A056C6400B0610F /* GistsCleanSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsCleanSwiftViewController.swift; sourceTree = "<group>"; };
+		70CCCFE92A056C6400B0610F /* GistsCleanSwiftInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsCleanSwiftInteractor.swift; sourceTree = "<group>"; };
+		70CCCFF02A0694F400B0610F /* GistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistCell.swift; sourceTree = "<group>"; };
+		70CCCFF22A06953E00B0610F /* GistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistViewController.swift; sourceTree = "<group>"; };
+		70CCCFF42A069C2300B0610F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		70D5F59B2A1955A300E7BFC6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		70D5F59D2A1955BC00E7BFC6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		70D5F59F2A1955CE00E7BFC6 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		70D5F5A12A1955E200E7BFC6 /* CreateBodyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBodyStruct.swift; sourceTree = "<group>"; };
 		70EB4A7828661E710012BF4F /* Gists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EB4A7B28661E710012BF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70EB4A7D28661E710012BF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		70EB4A7F28661E710012BF4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		70EB4A8228661E710012BF4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70EB4A8428661E730012BF4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70EB4A8728661E730012BF4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70EB4A8928661E730012BF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70EB4A9028661F690012BF4F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		70EB4AB72869C9800012BF4F /* GistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistViewController.swift; sourceTree = "<group>"; };
-		70EB4AB82869C9800012BF4F /* GistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70D5F59A2A19556E00E7BFC6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				70D5F59B2A1955A300E7BFC6 /* HTTPMethod.swift */,
+				70D5F59D2A1955BC00E7BFC6 /* NetworkError.swift */,
+				70D5F59F2A1955CE00E7BFC6 /* NetworkClient.swift */,
+				70D5F5A12A1955E200E7BFC6 /* CreateBodyStruct.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		70EB4A6F28661E710012BF4F = {
 			isa = PBXGroup;
 			children = (
@@ -68,53 +87,22 @@
 		70EB4A7A28661E710012BF4F /* Gists */ = {
 			isa = PBXGroup;
 			children = (
-				70EB4A8F28661F440012BF4F /* Model */,
-				70EB4A92286620270012BF4F /* ViewModel */,
-				70EB4A96286628090012BF4F /* View */,
-				70EB4A95286621570012BF4F /* Controller */,
+				70D5F59A2A19556E00E7BFC6 /* Services */,
 				70EB4A7D28661E710012BF4F /* SceneDelegate.swift */,
+				70CCCFE42A056C6400B0610F /* GistsCleanSwiftPresenter.swift */,
+				70CCCFE62A056C6400B0610F /* GistsCleanSwiftRouter.swift */,
+				70CCCFE72A056C6400B0610F /* GistsCleanSwiftModels.swift */,
+				70CCCFE82A056C6400B0610F /* GistsCleanSwiftViewController.swift */,
+				70CCCFE92A056C6400B0610F /* GistsCleanSwiftInteractor.swift */,
 				70EB4A8428661E730012BF4F /* Assets.xcassets */,
 				70EB4A8628661E730012BF4F /* LaunchScreen.storyboard */,
 				70EB4A8928661E730012BF4F /* Info.plist */,
+				70CCCFF02A0694F400B0610F /* GistCell.swift */,
+				70CCCFF22A06953E00B0610F /* GistViewController.swift */,
+				70EB4A7B28661E710012BF4F /* AppDelegate.swift */,
+				70CCCFF42A069C2300B0610F /* Main.storyboard */,
 			);
 			path = Gists;
-			sourceTree = "<group>";
-		};
-		70EB4A8F28661F440012BF4F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				70EB4A9028661F690012BF4F /* User.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		70EB4A92286620270012BF4F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				70B755D729FB0BB5003C4D40 /* HTTPMethod.swift */,
-				70B755D929FB0BDD003C4D40 /* NetworkError.swift */,
-				70B755DB29FB0C6B003C4D40 /* NetworkClient.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		70EB4A95286621570012BF4F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				70EB4A7F28661E710012BF4F /* ViewController.swift */,
-				70EB4A7B28661E710012BF4F /* AppDelegate.swift */,
-				70EB4AB72869C9800012BF4F /* GistViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		70EB4A96286628090012BF4F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				70EB4A8128661E710012BF4F /* Main.storyboard */,
-				70EB4AB82869C9800012BF4F /* GistViewController.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,10 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70CCCFF52A069C2300B0610F /* Main.storyboard in Resources */,
 				70EB4A8828661E730012BF4F /* LaunchScreen.storyboard in Resources */,
-				70EB4ABA2869C9800012BF4F /* GistViewController.xib in Resources */,
 				70EB4A8528661E730012BF4F /* Assets.xcassets in Resources */,
-				70EB4A8328661E710012BF4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,28 +176,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70EB4A9128661F690012BF4F /* User.swift in Sources */,
-				70B755DA29FB0BDD003C4D40 /* NetworkError.swift in Sources */,
-				70EB4AB92869C9800012BF4F /* GistViewController.swift in Sources */,
-				70B755D829FB0BB5003C4D40 /* HTTPMethod.swift in Sources */,
-				70EB4A8028661E710012BF4F /* ViewController.swift in Sources */,
+				70CCCFEF2A056C6400B0610F /* GistsCleanSwiftInteractor.swift in Sources */,
+				70CCCFED2A056C6400B0610F /* GistsCleanSwiftModels.swift in Sources */,
+				70CCCFF12A0694F500B0610F /* GistCell.swift in Sources */,
+				70CCCFEA2A056C6400B0610F /* GistsCleanSwiftPresenter.swift in Sources */,
+				70CCCFF32A06953E00B0610F /* GistViewController.swift in Sources */,
+				70D5F5A22A1955E200E7BFC6 /* CreateBodyStruct.swift in Sources */,
+				70CCCFEE2A056C6400B0610F /* GistsCleanSwiftViewController.swift in Sources */,
 				70EB4A7C28661E710012BF4F /* AppDelegate.swift in Sources */,
+				70CCCFEC2A056C6400B0610F /* GistsCleanSwiftRouter.swift in Sources */,
+				70D5F59C2A1955A300E7BFC6 /* HTTPMethod.swift in Sources */,
+				70D5F59E2A1955BC00E7BFC6 /* NetworkError.swift in Sources */,
 				70EB4A7E28661E710012BF4F /* SceneDelegate.swift in Sources */,
-				70B755DC29FB0C6B003C4D40 /* NetworkClient.swift in Sources */,
+				70D5F5A02A1955CE00E7BFC6 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		70EB4A8128661E710012BF4F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70EB4A8228661E710012BF4F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		70EB4A8628661E730012BF4F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

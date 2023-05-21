@@ -2,7 +2,7 @@
 //  NetworkError.swift
 //  Gists
 //
-//  Created by Дмитрий Подольский on 27.04.2023.
+//  Created by Дмитрий Подольский on 20.05.2023.
 //
 
 import Foundation
@@ -12,4 +12,6 @@ public enum NetworkError: Error {
     case invalidResponse
     case requestFailed(Error)
     case decodingFailed(Error)
+    case encodingFailed(Error)
 }
+
