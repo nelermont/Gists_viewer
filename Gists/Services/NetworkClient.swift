@@ -2,26 +2,29 @@
 //  NetworkClient.swift
 //  Gists
 //
-//  Created by Дмитрий Подольский on 26.04.2023.
+//  Created by Дмитрий Подольский on 20.05.2023.
 //
+
 import Foundation
 
 
-class NetworkClient: Networking {
+class NetworkClient {
     
+    private let baseUrl: URL
     private let urlSession: URLSession
     
-    init(urlSession: URLSession = .shared) {
+    init(baseUrl: URL, urlSession: URLSession = .shared) {
+        self.baseUrl = baseUrl
         self.urlSession = urlSession
     }
     
-    func makeRequest<T: Decodable>(url: URL, method: HTTPMethod? = nil, headers: [String: String]? = nil, query: [String: String]? = nil, body: Data? = nil, responseType: T.Type? = nil) async throws -> T? {
-        
+    func makeRequest<T: Decodable>(path: String, method: HTTPMethod? = nil, headers: [String: String]? = nil, query: [String: String]? = nil, body: CreateBodyStruct? = nil, responseType: T.Type?) async throws -> T? {
+        let url = baseUrl.appendingPathComponent(path)
         let request = try createRequest(url: url, method: method, headers: headers, query: query, body: body)
         return try await sendRequest(request: request, responseType: responseType)
     }
     
-    private func createRequest(url: URL, method: HTTPMethod?, headers: [String: String]?, query: [String: String]?, body: Data?) throws -> URLRequest {
+    private func createRequest(url: URL, method: HTTPMethod?, headers: [String: String]?, query: [String: String]?, body: CreateBodyStruct?) throws -> URLRequest {
         
         guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             throw NetworkError.invalidURL
@@ -47,7 +50,14 @@ class NetworkClient: Networking {
             }
         }
         
-        request.httpBody = body
+        if let body = body {
+            do {
+                let jsonData = try JSONEncoder().encode(body)
+                request.httpBody = jsonData
+            } catch {
+                throw NetworkError.encodingFailed(error)
+            }
+        }
         
         return request
     }

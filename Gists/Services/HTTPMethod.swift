@@ -2,7 +2,7 @@
 //  HTTPMethod.swift
 //  Gists
 //
-//  Created by Дмитрий Подольский on 27.04.2023.
+//  Created by Дмитрий Подольский on 20.05.2023.
 //
 
 import Foundation
@@ -18,3 +18,4 @@ public enum HTTPMethod: String {
     case connect = "CONNECT"
     case trace = "TRACE"
 }
+
